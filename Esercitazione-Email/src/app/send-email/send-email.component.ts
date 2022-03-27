@@ -7,8 +7,12 @@ import { Email } from '../email.model';
 })
 export class SendEmailComponent implements OnInit {
   @Input() mail:Email = undefined!; 
+  show= false;
+  Espen(): boolean{
+    this.show= !this.show
+    return false;
+  }
   constructor() { }
-
   ngOnInit(): void {
   }
 
