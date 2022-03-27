@@ -1,4 +1,5 @@
-<h1>{{mail.object}} - {{mail.email}}</h1>
+<h1 [ngClass]="cssColor">{{mail.object}} - {{mail.email}}</h1>
 <h1 *ngIf="show">{{mail.message}}</h1>
 <button *ngIf="!show" (click)="Espen()" >Espandi</button>
 <button *ngIf="show" (click)="Espen()" >Chiudi</button>
+<button *ngIf="special" (click)="especial()"> colora</button>
