@@ -9,7 +9,13 @@ import{Email} from "./email.model"
 
 export class AppComponent {
   title = 'Esercitazione-Email';
+  emails: Email[];
+  constructor(){
+    this.emails = [];
+    }    
   addEmail(email: HTMLInputElement, object: HTMLInputElement, message: HTMLInputElement){
-    
+    this.emails.push(new Email(email.value, object.value, message.value));
+    console.log(this.emails);
   }
+
 }
