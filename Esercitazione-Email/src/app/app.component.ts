@@ -13,9 +13,13 @@ export class AppComponent {
   constructor(){
     this.emails = [];
     }    
-  addEmail(email: HTMLInputElement, object: HTMLInputElement, message: HTMLInputElement){
+  addEmail(email: HTMLInputElement, object: HTMLInputElement, message: HTMLInputElement):boolean{
     this.emails.push(new Email(email.value, object.value, message.value));
     console.log(this.emails);
+    email.value = '';
+    object.value = '';
+    message.value = '';
+    return false;
   }
 
 }

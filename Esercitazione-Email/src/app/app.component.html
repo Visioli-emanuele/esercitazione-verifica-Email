@@ -14,3 +14,4 @@
 </div>
 
 <button (click)="addEmail(newEmail,newObject,newMessage)">invia</button>
+<app-send-email *ngFor="let mail of emails" [mail]="mail"></app-send-email>
